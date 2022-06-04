@@ -8,6 +8,7 @@ public class Tarefa {
     private String descricao;
     private boolean completa;
     private int ordem;
+    private Checklistitem[] cli;
 
     public Tarefa() {
         this.setUuid(UUID.randomUUID().toString());
@@ -28,10 +29,7 @@ public class Tarefa {
         return this.uuid;
     }
 
-    public void setNome(String nome) {
-
-        this.nome = nome;
-    }
+    public void setNome(String nome) {this.nome = nome;}
 
     public String getNome() {
         return this.nome;
@@ -59,5 +57,13 @@ public class Tarefa {
 
     public int getOrdem() {
         return this.ordem;
+    }
+
+    public Checklistitem[] getCli() {
+        return cli;
+    }
+
+    public void setCli(Checklistitem[] cli) {
+        this.cli = cli;
     }
 }
